@@ -1,0 +1,25 @@
+bundle:
+  name: priorizacao-comercial-databricks
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    default: true
+    workspace:
+      host: https://dbc-13aa7517-c807.cloud.databricks.com
+    variables:
+      catalog: comercial_dev
+
+  hml:
+    workspace:
+      host: https://dbc-13aa7517-c807.cloud.databricks.com
+    variables:
+      catalog: comercial_hml
+
+  prd:
+    workspace:
+      host: https://dbc-13aa7517-c807.cloud.databricks.com
+    variables:
+      catalog: comercial_prd
